@@ -1,0 +1,16 @@
+.library-container {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+}
+
+.library-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100px;
+    background: #eee;
+    border-radius: 25px;
+    padding: 25px;
+}

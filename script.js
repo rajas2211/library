@@ -1,17 +1,40 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-shadow */
-function Book(index, title, author, pages, read) {
-  this.index = index;
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  // this.info = () => `${this.name} by ${this.author}, ${this.pages} pages,
-  //                     ${this.read ? `read.`: `not yet read.`}`;
+class Book {
+  constructor(index, title, author, pages, read) {
+    this.index = index;
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    // this.info = () => `${this.name} by ${this.author}, ${this.pages} pages,
+    //                     ${this.read ? `read.`: `not yet read.`}`;
+  }
+
+  get index() {return this._index;}
+
+  set index(value) {this._index = value;}
+
+  get title() {return this._title;}
+
+  set title(value) {this._title = value;}
+
+  get author() {return this._author;}
+
+  set author(value) {this._author = value;}
+
+  get pages() {return this._pages;}
+
+  set pages(value) {this._pages = value;}
+
+  get read() {return this._read;}
+
+  set read(value) {this._read = value;}
+
+
+  toggleReadStatus() {this._read = !this._read;}
 }
 
-Book.prototype.toggleReadStatus = () => {
-    this.read = !this.read;
-};
 
 const myLibrary = [];
 myLibrary.push(new Book(0,'The Hobbit', 'J.R.R. Tolkien', 295, false));

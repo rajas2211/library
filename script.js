@@ -9,7 +9,7 @@ function Book(index, title, author, pages, read) {
   //                     ${this.read ? `read.`: `not yet read.`}`;
 }
 
-Book.prototype.toggleReadStatus = function() {
+Book.prototype.toggleReadStatus = () => {
     this.read = !this.read;
 };
 
